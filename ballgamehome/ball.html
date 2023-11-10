@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Test</title><style>body { margin: 0; }
+			#blocker {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.5);
+			}
+			
+			#instructions {
+				width: 100%;
+				height: 100%;
+			
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			
+				text-align: center;
+				font-size: 14px;
+				cursor: pointer;
+				color:aliceblue;
+			}</style>
+	</head>
+	<body>
+	  
+		<script type="module" src ="./main.js">
+			</script>
+		<div id="blocker">
+			<div id="instructions">
+				<p style="font-size:36px">
+					Click to play
+				</p>
+				<p>
+					Move: WASD<br/>
+					Jump: SPACE<br/>
+					Look: MOUSE<br/>
+					Restart: R
+				</p>
+			</div>
+	</body>
+</html>
