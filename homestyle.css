@@ -15,6 +15,15 @@ body {
     text-align: center;
     z-index: 999;
 }
+h1 {
+    position: absolute;
+    z-index: 1001;
+    color: azure;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .frame {
     position: fixed; /* Use 'fixed' instead of 'absolute' for a fixed position */
     top: 50%;

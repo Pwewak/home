@@ -7,7 +7,7 @@
     <title>Home</title><link rel="stylesheet" href="homestyle.css">
 </head>
 
-<body>
+<body> <center><h1>Press "X" to close window</h1></center>
     <div class="button-container">
         <button id="b1" class="big-button">Play Meow</button><br><br>
         <button id="b2" class="big-button">Play Balls</button>
@@ -42,8 +42,33 @@
             iframe.src = './jsrunnerhome/run.html';
             iframeContainer.style.display = 'flex';
             iframeContainer.classList.remove('pointer-events-none');
-    }
-    
+        }
+            // Add an event listener for the "X" key press
+            document.addEventListener('keydown', function (event) {
+            if (event.code === 'KeyX') {
+                console.log('Pressed X key, hiding the iframe');
+                hideIframe();
+            }
+        });
+
+        function toggleIframe() {
+            console.log('toggleIframe called');
+            if (iframeContainer.style.display === 'flex') {
+                // If the iframe is currently visible, hide it
+                hideIframe();
+            } else {
+                // If the iframe is not visible, show it
+                iframe.src = './snakegamehome/snake.html';
+                iframeContainer.style.display = 'flex';
+                iframeContainer.classList.remove('pointer-events-none');
+            }
+        }
+
+        function hideIframe() {
+            console.log('hideIframe called');
+            iframeContainer.style.display = 'none';
+            iframeContainer.classList.add('pointer-events-none');
+        }
     </script>
         
 </body>
