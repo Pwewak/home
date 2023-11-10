@@ -15,7 +15,17 @@ body {
     text-align: center;
     z-index: 999;
 }
-
+.frame {
+    position: fixed; /* Use 'fixed' instead of 'absolute' for a fixed position */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 999;
+    border: none;
+    width: 190vh;
+    height: 95vh;
+}
 .big-button {
     display: inline-block;
     padding: 15px 30px;
@@ -35,4 +45,7 @@ body {
     background-color: black;
     color: white;
     border: 2px solid grey;
+}
+.pointer-events-none {
+    pointer-events: none;
 }

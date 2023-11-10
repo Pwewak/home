@@ -9,11 +9,42 @@
 
 <body>
     <div class="button-container">
-        <a class="big-button" href="./jsrunnerhome/run.html">Play Meow</a><br><br>
-        <a class="big-button"href="./ballgamehome/ball.html">Play Balls</a>
-        <a class="big-button" href="./snakegamehome/snake.html">Play Snake</a>
-    </div>
+        <button id="b1" class="big-button">Play Meow</button><br><br>
+        <button id="b2" class="big-button">Play Balls</button>
+        <button id="b3" class="big-button">Play Snake</button>
+    </div><div class="pointer-events-none" id="iframeContainer"> <iframe class="frame" id="iFrame"></iframe> </div>
+    <script>
+        var iframe = document.getElementById("iFrame");
+        var iframeContainer = document.getElementById("iframeContainer");
+
+        document.getElementById("b3").onclick = snakegame;
     
+        function snakegame() {
+            console.log('b3 called');
+            iframe.src = './snakegamehome/snake.html';
+            iframeContainer.style.display = 'flex';
+            iframeContainer.classList.remove('pointer-events-none');
+        }
+        document.getElementById("b2").onclick = ball;
+        
+    
+        function ball() {
+            console.log('b2 called');
+            iframe.src = './ballgamehome/ball.html';
+            iframeContainer.style.display = 'flex';
+            iframeContainer.classList.remove('pointer-events-none');
+        }
+        document.getElementById("b1").onclick = meow;
+        
+    
+        function meow() {
+            console.log('b1 called');
+            iframe.src = './jsrunnerhome/run.html';
+            iframeContainer.style.display = 'flex';
+            iframeContainer.classList.remove('pointer-events-none');
+    }
+    
+    </script>
         
 </body>
 <script type = "module" src="homemain.js"></script>
