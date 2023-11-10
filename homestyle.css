@@ -1,0 +1,38 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: silver; /* Set a light background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.button-container {
+    position: absolute;
+    text-align: center;
+    z-index: 999;
+}
+
+.big-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: grey;
+    color: black;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    margin-bottom: 20px; /* Add margin between buttons */
+}
+
+.big-button:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid grey;
+}
