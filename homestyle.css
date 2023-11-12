@@ -19,7 +19,7 @@ h1 {
     position: absolute;
     z-index: 1001;
     color: azure;
-    top: 10%;
+    top: 4%;
     left: 50%;
     transform: translateX(-50%);
 }
